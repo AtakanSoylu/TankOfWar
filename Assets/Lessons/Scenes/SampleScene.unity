@@ -372,6 +372,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 493d904a7b2a01a4487d81063a6df6a7, type: 2}
     - target: {fileID: 8584195833469527835, guid: 8a79ca10acdd92e4980995f451773944, type: 3}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584195833469527835, guid: 8a79ca10acdd92e4980995f451773944, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584195833469527835, guid: 8a79ca10acdd92e4980995f451773944, type: 3}
       propertyPath: m_Constraints
       value: 80
       objectReference: {fileID: 0}
