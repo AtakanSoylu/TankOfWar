@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace TankOfWar
+namespace TankOfWar.Camera
 {
     [CreateAssetMenu(menuName = "TankOfWar/Camera/Camera Settings")]
     public class CameraSettings : ScriptableObject

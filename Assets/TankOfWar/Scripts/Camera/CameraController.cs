@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace TankOfWar
+namespace TankOfWar.Camera
 {
     public class CameraController : MonoBehaviour
     {
