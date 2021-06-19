@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using TankOfWar.Shooting;
 using UnityEngine;
 
 namespace TankOfWar.Camera
@@ -11,8 +10,6 @@ namespace TankOfWar.Camera
         [SerializeField] private Transform _targetTranform;
         [SerializeField] private Transform _cameraTranform;
 
-        //test
-        public ShootingManager _shootingManager;
 
         private void Update()
         {
@@ -21,7 +18,7 @@ namespace TankOfWar.Camera
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                _shootingManager.Shoot(_cameraTranform.position, _cameraTranform.forward);
+
             }
         }
 

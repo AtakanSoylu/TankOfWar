@@ -10,7 +10,6 @@ namespace TankOfWar.Inventory
         public override void CreateIntoInventory(PlayerInventoryController targetPlayerInventory)
         {
             var inisantiated = InstantiateAndInitializePrefab(targetPlayerInventory.Parent);
-            Debug.Log("THIS CLASS IS BODY ITEM DATA");
         }
     }
 }
