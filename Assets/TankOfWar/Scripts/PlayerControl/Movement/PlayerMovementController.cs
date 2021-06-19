@@ -9,6 +9,7 @@ namespace TankOfWar.PlayerControls
     {
         [SerializeField] private InputData _inputData;
         [SerializeField] private Rigidbody _rigidBody;
+        [SerializeField] private Transform _targetTransform;
         [SerializeField] private PlayerMovementSettings _playerMovementSettings;
 
 
@@ -17,8 +18,7 @@ namespace TankOfWar.PlayerControls
 
             _rigidBody.MovePosition(_rigidBody.position + (_rigidBody.transform.forward * _inputData.Vertical * 
                 _playerMovementSettings.VerticalSpeed));
-            _rigidBody.MovePosition(_rigidBody.position + (_rigidBody.transform.right * _inputData.Horizontal * 
-                _playerMovementSettings.HorizontalSpeeed));
+            _targetTransform.Rotate(0, _inputData.Horizontal * _playerMovementSettings.HorizontalSpeeed, 0, Space.Self);
         }
 
 

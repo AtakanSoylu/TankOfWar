@@ -19,6 +19,12 @@ namespace TankOfWar.Camera
             CameraRotationFollow();
             CameraMovementFollow();
 
+            if (Input.GetKeyDown(KeyCode.U))
+            {
+                Debug.Log(_cameraTranform.right);
+                Debug.Log(_cameraTranform.up);
+                Debug.Log(_cameraTranform.forward);
+            }
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 _shootingManager.Shoot(_cameraTranform.position, _cameraTranform.forward);
@@ -28,20 +34,17 @@ namespace TankOfWar.Camera
         private void CameraRotationFollow()
         {
             _cameraTranform.rotation = Quaternion.Lerp(_cameraTranform.rotation,
-                Quaternion.LookRotation(_targetTranform.position - _cameraTranform.position),
+                Quaternion.LookRotation(_targetTranform.forward),
                 Time.deltaTime * _cameraSettings.RotationLerpSpeed);
         }
 
         private void CameraMovementFollow()
         {
-            _cameraTranform.position = Vector3.Lerp(_cameraTranform.position,
-                _targetTranform.position + _cameraSettings.PositionOffset,
+            Vector3 offset = (_cameraTranform.right * _cameraSettings.PositionOffset.x) 
+                + (_cameraTranform.up * _cameraSettings.PositionOffset.y) 
+                + (_cameraTranform.forward * _cameraSettings.PositionOffset.z);
+            _cameraTranform.position = Vector3.Lerp(_cameraTranform.position,_targetTranform.position + offset,
                 Time.deltaTime * _cameraSettings.PositionLerp);
         }
-
-
-
-
-
     }
 }

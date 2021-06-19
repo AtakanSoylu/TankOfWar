@@ -10,7 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7c020b888c641448a26821a19eea158, type: 3}
-  m_Name: InputData_LocalPlayerRotationInput
+  m_Name: InputData_TowerBasicInput
   m_EditorClassIdentifier: 
   Horizontal: 0
   Vertical: 0
+  _axisActive: 0
+  AxisNameHorizontal: 
+  AxisNameVertical: 
+  _keyBaseHorizontalActive: 1
+  PositiveHorizontalKeyCode: 113
+  NegativeHorizontalKeyCode: 101
+  _keyBaseVerticalActive: 0
+  PositiveVerticalKeyCode: 0
+  NegativeVerticalKeyCode: 0
+  _increaseAmount: 0.015
