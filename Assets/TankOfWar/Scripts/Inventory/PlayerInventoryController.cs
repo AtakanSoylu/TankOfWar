@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UniRx;
 
 namespace TankOfWar.Inventory
 {
@@ -11,6 +12,15 @@ namespace TankOfWar.Inventory
 
         //TEST
         public Transform Parent;
+
+
+        public ReactiveCommand ReactiveShootCommand { get; private set;}
+
+
+
+
+
+
         private void Start()
         {
             InitializeInventory(_inventoryItemDataArray);
@@ -23,13 +33,19 @@ namespace TankOfWar.Inventory
 
         public void InitializeInventory(AbstractBasePlayerInventoryItemData[] inventoryItemDataArray)
         {
-            ClearInventory();
+            //adjusting reactive command
+            ReactiveShootCommand.Dispose();
+            ReactiveShootCommand = new ReactiveCommand();
 
+
+
+            ClearInventory();
             _instantiatedItemDataList = new List<AbstractBasePlayerInventoryItemData>(inventoryItemDataArray.Length);
+
             for (int i = 0; i < inventoryItemDataArray.Length; i++)
             {
                 var instantiated = Instantiate(inventoryItemDataArray[i]);
-                instantiated.CreateIntoInventory(this);
+                instantiated.Initialize(this);
                 _instantiatedItemDataList.Add(instantiated);
             }
         }

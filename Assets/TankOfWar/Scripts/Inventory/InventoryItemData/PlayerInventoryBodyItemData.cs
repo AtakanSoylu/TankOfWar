@@ -7,7 +7,7 @@ namespace TankOfWar.Inventory
 
     public class PlayerInventoryBodyItemData : AbstractPlayerInventoryItemData<PlayerInventoryBodyItemMono>
     {
-        public override void CreateIntoInventory(PlayerInventoryController targetPlayerInventory)
+        public override void Initialize(PlayerInventoryController targetPlayerInventory)
         {
             var inisantiated = InstantiateAndInitializePrefab(targetPlayerInventory.Parent);
         }

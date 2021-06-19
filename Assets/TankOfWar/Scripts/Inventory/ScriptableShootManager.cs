@@ -18,5 +18,19 @@ namespace TankOfWar.Inventory
             
         }
 
+        public void Shoot(Vector3 from,Vector3 direction)
+        {
+            RaycastHit hit;
+            var physic = Physics.Raycast(from, direction,out hit);
+            if (physic)
+            {
+                Debug.Log("Name:" + hit.transform.name);
+            }
+
+        }
+
+
+
+
     }
 }
