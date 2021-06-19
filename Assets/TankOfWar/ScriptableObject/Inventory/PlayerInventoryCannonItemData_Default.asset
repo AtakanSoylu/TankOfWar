@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemId: default_cannon
   _inventoryItemDataType: 0
-  _prefab: {fileID: 0}
+  _prefab: {fileID: 1628827146348832033, guid: 4386d71924403d849aaa92ffd2f98388, type: 3}
+  _damage: 0

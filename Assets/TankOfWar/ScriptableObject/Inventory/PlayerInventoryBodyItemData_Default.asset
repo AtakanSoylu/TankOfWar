@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemId: default_body
   _inventoryItemDataType: 1
-  _prefab: {fileID: 0}
+  _prefab: {fileID: -3335061280964862262, guid: 1ddf93e808390164da6eafccebdb6e42, type: 3}
