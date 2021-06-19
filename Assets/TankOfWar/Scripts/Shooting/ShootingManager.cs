@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using TankOfWar.Stat;
 using UnityEngine;
 namespace TankOfWar.Shooting
 {
@@ -14,11 +13,7 @@ namespace TankOfWar.Shooting
 
             if (rayHit)
             {
-                if (hit.transform.GetComponent<HealthStat>() != null)
-                {
-                    hit.transform.GetComponent<HealthStat>().TakeHarras(5);
-                }
-                Debug.Log(hit.transform.name);
+
             }
         }
     }
