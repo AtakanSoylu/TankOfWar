@@ -19,12 +19,6 @@ namespace TankOfWar.Camera
             CameraRotationFollow();
             CameraMovementFollow();
 
-            if (Input.GetKeyDown(KeyCode.U))
-            {
-                Debug.Log(_cameraTranform.right);
-                Debug.Log(_cameraTranform.up);
-                Debug.Log(_cameraTranform.forward);
-            }
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 _shootingManager.Shoot(_cameraTranform.position, _cameraTranform.forward);
@@ -40,11 +34,7 @@ namespace TankOfWar.Camera
 
         private void CameraMovementFollow()
         {
-            Vector3 offset = (_cameraTranform.right * _cameraSettings.PositionOffset.x) 
-                + (_cameraTranform.up * _cameraSettings.PositionOffset.y) 
-                + (_cameraTranform.forward * _cameraSettings.PositionOffset.z);
-            _cameraTranform.position = Vector3.Lerp(_cameraTranform.position,_targetTranform.position + offset,
-                Time.deltaTime * _cameraSettings.PositionLerp);
+            _cameraTranform.localPosition = _cameraSettings.PositionOffset;
         }
     }
 }
